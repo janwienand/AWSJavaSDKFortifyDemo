@@ -28,7 +28,7 @@ public class App {
 
   public static void main(String[] args) throws IOException {
 
-    Region region = Region.US_EAST_1;
+    Region region = Region.US_WEST_2;
     S3Client s3 = S3Client.builder().region(region).build();
 
     String bucket = "jw-testbucket" + System.currentTimeMillis();
@@ -62,7 +62,7 @@ public class App {
           .bucket(bucketName)
           .createBucketConfiguration(
               CreateBucketConfiguration.builder()
-                  //.locationConstraint(region.id())
+                  .locationConstraint(region.id())
                   .build())
           .acl(acl)
           .build());
