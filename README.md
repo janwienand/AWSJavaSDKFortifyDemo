@@ -1,6 +1,6 @@
 # Fortify scanning of Amazon Web Services (AWS) SDK (Java)
 
-This is an example project for the demonstration of Fortify vulnerability scanning of a Java application that is using the [Amazon Web Services (AWS) SDK](https://aws.amazon.com/sdk-for-java/). 
+This is an example project for the demonstration of Fortify vulnerability scanning of a Java application using the [Amazon Web Services (AWS) SDK](https://aws.amazon.com/sdk-for-java/). 
 
 The application is based on the code in the "[Get started with the AWS SDK for Java 2.x](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/get-started.html "Get started with the AWS SDK for Java 2.x")" documentation.
 
