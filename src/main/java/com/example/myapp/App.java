@@ -34,6 +34,7 @@ public class App {
     String bucket = "jw-testbucket" + System.currentTimeMillis();
     String key = "key";
     String acl = "public-read-write";
+    String test = "test";
 
     tutorialSetup(s3, bucket, region, acl);
 
