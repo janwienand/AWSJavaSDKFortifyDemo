@@ -34,6 +34,7 @@ public class App {
     String bucket = "jw-testbucket" + System.currentTimeMillis();
     String key = "key";
     String acl = "public-read-write";
+    String test = "test";
 
     tutorialSetup(s3, bucket, region, acl);
 
@@ -46,7 +47,7 @@ public class App {
     System.out.println("Upload complete");
     System.out.printf("%n");
 
-    cleanUp(s3, bucket, key);
+    //cleanUp(s3, bucket, key);
 
     System.out.println("Closing the connection to {S3}");
     s3.close();
