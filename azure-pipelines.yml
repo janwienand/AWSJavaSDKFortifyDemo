@@ -10,25 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-
 - task: FortifyScanCentralSAST@7
   inputs:
     scanCentralCtrlUrl: 'http://3.65.18.52:8080/scancentral-ctrl/'
-    scanCentralClientToken: '"FortifySSC!"'
+    scanCentralClientToken: 'FortifySSC!'
     sscUrl: 'http://3.67.12.60:2122/ssc'
-    sscCiToken: '"9a252778-d216-4808-b2db-8a1c603265b7"'
+    sscCiToken: '9a252778-d216-4808-b2db-8a1c603265b7'
     uploadToSSC: true
-    applicationName: 'FortifyAWSJavaSDKDemo'
+    applicationName: 'JuiceShop'
     applicationVersion: '1'
     applicationVersionId: '9'
-    buildTool: mvn
+    buildTool: 'mvn'
