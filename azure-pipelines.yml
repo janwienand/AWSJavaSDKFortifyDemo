@@ -31,3 +31,4 @@ steps:
     applicationName: 'FortifyAWSJavaSDKDemo'
     applicationVersion: '1'
     applicationVersionId: '9'
+    buildTool: mvn
