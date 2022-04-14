@@ -21,10 +21,14 @@ stages:
         sscUrl: 'http://18.192.26.11:2122/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
-        applicationName: 'JuiceShop'
+        applicationName: 'FortifyAWSJavaSDKDemo'
         applicationVersion: '1'
         applicationVersionId: '9'
         buildTool: 'mvn'
+        block: true
+        outputFile: 'FortifyAWSJavaSDKDemo'
+        logFile: 'FortifyAWSJavaSDKDemo_Log'
+        overwrite: true
 
 - stage: Debricked
   jobs:
