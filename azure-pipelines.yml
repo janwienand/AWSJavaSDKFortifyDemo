@@ -16,9 +16,9 @@ stages:
     steps:
     - task: FortifyScanCentralSAST@7
       inputs:
-        scanCentralCtrlUrl: 'http://3.65.18.52:8080/scancentral-ctrl/'
+        scanCentralCtrlUrl: 'http://3.125.154.136:8080/scancentral-ctrl/'
         scanCentralClientToken: '$(ScanCentral.ClientToken)'
-        sscUrl: 'http://3.67.12.60:2122/ss'
+        sscUrl: 'http://18.192.26.11:2122/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
         applicationName: 'JuiceShop'
