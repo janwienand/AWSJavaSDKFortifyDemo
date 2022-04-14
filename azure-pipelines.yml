@@ -18,9 +18,12 @@ stages:
       inputs:
         scanCentralCtrlUrl: 'http://3.125.154.136:8080/scancentral-ctrl/'
         scanCentralClientToken: '$(ScanCentral.ClientToken)'
-        sscUrl: 'http://18.192.26.11:2122/ssc/'
+        sscUrl: 'http://18.192.26.11:2122/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
-        uploadToSSC: false
+        uploadToSSC: true
+        applicationName: 'JuiceShop'
+        applicationVersion: '1'
+        applicationVersionId: '9'
         buildTool: 'mvn'
 
 - stage: Debricked
