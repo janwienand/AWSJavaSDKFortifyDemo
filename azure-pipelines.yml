@@ -29,3 +29,8 @@ stages:
         outputFile: 'FortifyAWSJavaSDKDemo'
         logFile: 'FortifyAWSJavaSDKDemo_Log'
         overwrite: true
+    - task: NexusIqPipelineTask@1
+      inputs:
+        nexusIqService: 'Sonatype'
+        applicationId: 'AWSJavaSDKDemo'
+        stage: 'Build'
