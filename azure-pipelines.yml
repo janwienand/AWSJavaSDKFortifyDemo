@@ -16,9 +16,9 @@ stages:
     steps:
     - task: FortifyScanCentralSAST@7
       inputs:
-        scanCentralCtrlUrl: 'http://3.125.154.136:8080/scancentral-ctrl/'
+        scanCentralCtrlUrl: 'http://3.73.138.115:8080/scancentral-ctrl/'
         scanCentralClientToken: '$(ScanCentral.ClientToken)'
-        sscUrl: 'http://18.192.26.11:2122/ssc'
+        sscUrl: 'http://18.159.212.243:2122/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
         applicationName: 'FortifyAWSJavaSDKDemo'
@@ -29,19 +29,3 @@ stages:
         outputFile: 'FortifyAWSJavaSDKDemo'
         logFile: 'FortifyAWSJavaSDKDemo_Log'
         overwrite: true
-
-- stage: Debricked
-  jobs:
-  - job: Debricked
-    displayName: Debricked scan
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-      - script: mvn dependency:tree -DoutputFile=.debricked-maven-dependencies.tgf -DoutputType=tgf
-        displayName: 'mvn dependency:tree'
-      - script: |
-          env > env.list
-          docker run -v $HOME:$HOME --env-file ./env.list --entrypoint "/azure-devops.sh" debricked/debricked-scan:latest
-        displayName: 'Debricked scan'
-        env:
-          DEBRICKED_TOKEN: $(DEBRICKED_TOKEN)
