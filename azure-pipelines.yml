@@ -21,9 +21,9 @@ stages:
         sscUrl: 'http://18.159.194.21:2210/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
-        applicationName: 'FortifyAWSJavaSDKDemo'
+        applicationName: 'DemoApp'
         applicationVersion: '1'
-        applicationVersionId: '9'
+        applicationVersionId: '7'
         buildTool: 'mvn'
         block: true
         outputFile: 'FortifyAWSJavaSDKDemo'
