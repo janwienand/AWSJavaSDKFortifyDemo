@@ -16,9 +16,9 @@ stages:
     steps:
     - task: FortifyScanCentralSAST@7
       inputs:
-        scanCentralCtrlUrl: 'http://3.73.138.115:8080/scancentral-ctrl/'
+        scanCentralCtrlUrl: 'http://3.73.79.108:8080/scancentral-ctrl/'
         scanCentralClientToken: '$(ScanCentral.ClientToken)'
-        sscUrl: 'http://18.159.212.243:2122/ssc'
+        sscUrl: 'http://18.159.194.21:2210/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
         applicationName: 'FortifyAWSJavaSDKDemo'
@@ -29,8 +29,3 @@ stages:
         outputFile: 'FortifyAWSJavaSDKDemo'
         logFile: 'FortifyAWSJavaSDKDemo_Log'
         overwrite: true
-    - task: NexusIqPipelineTask@1
-      inputs:
-        nexusIqService: 'Sonatype'
-        applicationId: 'AWSJavaSDKDemo'
-        stage: 'Build'
