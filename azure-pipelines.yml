@@ -21,11 +21,7 @@ stages:
         sscUrl: 'http://3.70.95.75:2210/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
-        applicationName: 'DemoApp'
-        applicationVersion: '1'
+        applicationIdentifierType: 'byId'
         applicationVersionId: '7'
+        buildFailureCriteria: '[fortify priority order]:critical'
         buildTool: 'mvn'
-        block: true
-        outputFile: 'FortifyAWSJavaSDKDemo'
-        logFile: 'FortifyAWSJavaSDKDemo_Log'
-        overwrite: true
