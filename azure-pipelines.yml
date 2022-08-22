@@ -16,9 +16,9 @@ stages:
     - task: FortifyScanCentralSAST@7
       inputs:
         scanCentralCtrlUrl: 'http://3.123.38.205:8080/scancentral-ctrl/'
-        scanCentralClientToken: '$(ScanCentral.ClientToken)'
+        scanCentralClientToken: 'FortifySSC!'
         sscUrl: 'http://3.70.95.75:2210/ssc'
-        sscCiToken: '$(ScanCentral.SscCiToken)'
+        sscCiToken: '6bc97ce5-0762-4f9f-a304-50c68bf4b978'
         uploadToSSC: true
         applicationIdentifierType: 'byId'
         applicationVersionId: '7'
