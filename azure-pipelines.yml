@@ -3,8 +3,7 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
-- master
+trigger: none
 
 pool:
   vmImage: ubuntu-latest
@@ -23,5 +22,4 @@ stages:
         uploadToSSC: true
         applicationIdentifierType: 'byId'
         applicationVersionId: '7'
-        buildFailureCriteria: '[fortify priority order]:critical'
         buildTool: 'mvn'
