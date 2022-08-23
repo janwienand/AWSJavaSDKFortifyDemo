@@ -4,7 +4,7 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- stage: 'Fortify'
+- stage: Fortify
   jobs:
   - job: FortifySAST
     steps:
@@ -20,9 +20,9 @@ stages:
         buildFailureCriteria: '[fortify priority order]:critical'
         buildTool: 'mvn'
 
-- stage: debricked
+- stage: Debricked
   jobs:
-  - job: debricked
+  - job: DebrickedSCA
     displayName: Debricked scan
     pool:
       vmImage: 'ubuntu-latest'
