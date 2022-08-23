@@ -7,6 +7,7 @@ stages:
 - stage: Fortify
   jobs:
   - job: FortifySAST
+    displayName: Fortify SAST
     steps:
     - task: FortifyScanCentralSAST@7
       inputs:
@@ -22,10 +23,8 @@ stages:
 
 - stage: Debricked
   jobs:
-  - job: DebrickedSCA
-    displayName: Debricked scan
-    pool:
-      vmImage: 'ubuntu-latest'
+  - job: Debricked
+    displayName: Fortify SCA (Debricked)
     steps:
       - script: mvn dependency:tree -DoutputFile=.debricked-maven-dependencies.tgf -DoutputType=tgf
         displayName: 'mvn dependency:tree'
