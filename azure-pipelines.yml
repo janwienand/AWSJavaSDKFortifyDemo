@@ -5,8 +5,7 @@
 
 trigger: none
 
-pool:
-  vmImage: ubuntu-latest
+pool: Default
 
 stages:
 - stage: 'Fortify'
@@ -16,11 +15,11 @@ stages:
     - task: FortifyScanCentralSAST@7
       inputs:
         scanCentralCtrlUrl: 'http://3.123.38.205:8080/scancentral-ctrl/'
-        scanCentralClientToken: 'FortifySSC!'
+        scanCentralClientToken: '$(ScanCentral.ClientToken)'
         sscUrl: 'http://3.70.95.75:2210/ssc'
-        sscCiToken: '6bc97ce5-0762-4f9f-a304-50c68bf4b978'
+        sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
         applicationIdentifierType: 'byId'
         applicationVersionId: '7'
+        buildFailureCriteria: '[fortify priority order]:critical'
         buildTool: 'mvn'
-        sensorPool: '823572dd-d889-45cc-a780-e041dd0a17a7'
