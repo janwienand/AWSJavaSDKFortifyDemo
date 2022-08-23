@@ -5,7 +5,8 @@
 
 trigger: none
 
-pool: Default
+pool:
+  vmImage: ubuntu-latest
 
 stages:
 - stage: 'Fortify'
@@ -23,3 +24,19 @@ stages:
         applicationVersionId: '7'
         buildFailureCriteria: '[fortify priority order]:critical'
         buildTool: 'mvn'
+
+- stage: debricked
+  jobs:
+  - job: debricked
+    displayName: Debricked scan
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - script: mvn dependency:tree -DoutputFile=.debricked-maven-dependencies.tgf -DoutputType=tgf
+        displayName: 'mvn dependency:tree'
+      - script: |
+          env > env.list
+          docker run -v $HOME:$HOME --env-file ./env.list --entrypoint "/azure-devops.sh" debricked/debricked-scan:latest
+        displayName: 'Debricked scan'
+        env:
+          DEBRICKED_TOKEN: $(DEBRICKED_TOKEN)
