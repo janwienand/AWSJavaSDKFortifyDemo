@@ -21,6 +21,7 @@ stages:
         applicationVersionId: '7'
         buildFailureCriteria: '[fortify priority order]:critical'
         buildTool: 'mvn'
+        taskResultForBuildFailureCriteria: 'FAIL'
 
 - stage: Debricked
   jobs:
