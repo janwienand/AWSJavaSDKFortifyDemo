@@ -20,7 +20,7 @@ stages:
         applicationIdentifierType: 'byId'
         applicationVersionId: '7'
         buildFailureCriteria: '[fortify priority order]:critical'
-        taskResultForBuildFailureCriteria: 'FAIL'
+        taskResultForBuildFailureCriteria: 'WARN'
         buildTool: 'mvn'
         block: true
         outputFile: 'result.fpr'
