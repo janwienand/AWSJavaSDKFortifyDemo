@@ -26,9 +26,6 @@ stages:
         outputFile: 'result.fpr'
         logFile: 'scan.log'
         overwrite: true
-    - task: CmdLine@2
-      inputs:
-        script: 'FPRUtility -information -categoryIssueCounts -project C:\dev\agent\_work\2\s\result.fpr'
 
 - stage: Debricked
   jobs:
