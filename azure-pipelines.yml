@@ -22,7 +22,6 @@ stages:
         buildFailureCriteria: '[fortify priority order]:critical'
         taskResultForBuildFailureCriteria: 'WARN'
         buildTool: 'mvn'
-        block: true
 
 - stage: Debricked
   jobs:
