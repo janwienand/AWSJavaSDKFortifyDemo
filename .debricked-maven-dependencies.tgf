@@ -1,0 +1,82 @@
+1016408627 com.example.myapp:myapp:jar:1.0-SNAPSHOT
+1699637904 junit:junit:jar:3.8.1:test
+145664926 software.amazon.awssdk:s3:jar:2.16.60:compile
+44227594 software.amazon.awssdk:aws-xml-protocol:jar:2.16.60:compile
+973123933 software.amazon.awssdk:aws-query-protocol:jar:2.16.60:compile
+921640293 software.amazon.awssdk:protocol-core:jar:2.16.60:compile
+1273012861 software.amazon.awssdk:arns:jar:2.16.60:compile
+1597400455 software.amazon.awssdk:profiles:jar:2.16.60:compile
+1610853733 software.amazon.awssdk:sdk-core:jar:2.16.60:compile
+784961589 com.fasterxml.jackson.core:jackson-core:jar:2.12.3:compile
+1618230491 com.fasterxml.jackson.core:jackson-databind:jar:2.12.1:compile
+201484047 org.reactivestreams:reactive-streams:jar:1.0.3:compile
+1897372527 software.amazon.awssdk:auth:jar:2.16.60:compile
+331216192 software.amazon.eventstream:eventstream:jar:1.0.1:compile
+1382973704 software.amazon.awssdk:http-client-spi:jar:2.16.60:compile
+1305194069 software.amazon.awssdk:regions:jar:2.16.60:compile
+4888672 com.fasterxml.jackson.core:jackson-annotations:jar:2.12.3:compile
+2090953436 software.amazon.awssdk:annotations:jar:2.16.60:compile
+1524744833 software.amazon.awssdk:utils:jar:2.16.60:compile
+1254651534 software.amazon.awssdk:aws-core:jar:2.16.60:compile
+513113647 software.amazon.awssdk:metrics-spi:jar:2.16.60:compile
+1762984107 software.amazon.awssdk:apache-client:jar:2.16.60:runtime
+1035219650 org.apache.httpcomponents:httpclient:jar:4.5.13:runtime
+876695548 commons-logging:commons-logging:jar:1.2:runtime
+26229597 commons-codec:commons-codec:jar:1.11:runtime
+1078031260 org.apache.httpcomponents:httpcore:jar:4.4.11:runtime
+1560243060 software.amazon.awssdk:netty-nio-client:jar:2.16.60:runtime
+1652552120 io.netty:netty-codec-http:jar:4.1.63.Final:runtime
+1656059001 io.netty:netty-codec-http2:jar:4.1.63.Final:runtime
+698562080 io.netty:netty-codec:jar:4.1.63.Final:runtime
+245386411 io.netty:netty-transport:jar:4.1.63.Final:runtime
+323981046 io.netty:netty-resolver:jar:4.1.63.Final:runtime
+1519396442 io.netty:netty-common:jar:4.1.63.Final:runtime
+1781668126 io.netty:netty-buffer:jar:4.1.63.Final:runtime
+1727776231 io.netty:netty-handler:jar:4.1.63.Final:runtime
+162320368 io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.63.Final:runtime
+1381341801 io.netty:netty-transport-native-unix-common:jar:4.1.63.Final:runtime
+676692948 com.typesafe.netty:netty-reactive-streams-http:jar:2.0.4:runtime
+272220100 com.typesafe.netty:netty-reactive-streams:jar:2.0.4:runtime
+2139431292 org.slf4j:slf4j-api:jar:1.7.30:compile
+33389111 org.slf4j:slf4j-simple:jar:1.7.35:compile
+#
+1016408627 1699637904 test
+44227594 973123933 compile
+145664926 44227594 compile
+145664926 921640293 compile
+145664926 1273012861 compile
+145664926 1597400455 compile
+1610853733 784961589 compile
+1610853733 1618230491 compile
+1610853733 201484047 compile
+145664926 1610853733 compile
+1897372527 331216192 compile
+145664926 1897372527 compile
+145664926 1382973704 compile
+1305194069 4888672 compile
+145664926 1305194069 compile
+145664926 2090953436 compile
+145664926 1524744833 compile
+145664926 1254651534 compile
+145664926 513113647 compile
+1035219650 876695548 runtime
+1035219650 26229597 runtime
+1762984107 1035219650 runtime
+1762984107 1078031260 runtime
+145664926 1762984107 runtime
+1560243060 1652552120 runtime
+1560243060 1656059001 runtime
+1560243060 698562080 runtime
+245386411 323981046 runtime
+1560243060 245386411 runtime
+1560243060 1519396442 runtime
+1560243060 1781668126 runtime
+1560243060 1727776231 runtime
+162320368 1381341801 runtime
+1560243060 162320368 runtime
+676692948 272220100 runtime
+1560243060 676692948 runtime
+145664926 1560243060 runtime
+1016408627 145664926 compile
+1016408627 2139431292 compile
+1016408627 33389111 compile
