@@ -32,7 +32,7 @@ public class App {
     S3Client s3 = S3Client.builder().region(region).build();
 
     String bucket = "jw-testbucket" + System.currentTimeMillis();
-    String key = "key";
+    //String key = "key";
     String acl = "public-read-write";
     String test = "test";
 
