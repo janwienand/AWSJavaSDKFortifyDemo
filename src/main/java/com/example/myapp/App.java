@@ -38,7 +38,7 @@ public class App {
 
     tutorialSetup(s3, bucket, region, acl);
 
-    //System.out.println("Uploading object...");
+    System.out.println("Uploading object...");
 
     s3.putObject(PutObjectRequest.builder().bucket(bucket).key(key)
             .build(),
