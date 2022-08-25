@@ -1,5 +1,5 @@
-trigger: none
-#- master
+trigger:
+- master
 
 pool:
   vmImage: ubuntu-latest
@@ -23,9 +23,6 @@ stages:
         taskResultForBuildFailureCriteria: 'WARN'
         buildTool: 'mvn'
         block: true
-        outputFile: 'result.fpr'
-        logFile: 'scan.log'
-        overwrite: true
 
 - stage: Debricked
   jobs:
