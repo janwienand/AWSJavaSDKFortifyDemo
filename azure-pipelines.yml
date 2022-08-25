@@ -10,22 +10,22 @@ stages:
   - job: FortifySAST
     displayName: Fortify SAST
     steps:
-	- task: FortifyScanCentralSAST@7
-	  inputs:
-	    scanCentralCtrlUrl: 'http://3.123.38.205:8080/scancentral-ctrl/'
-	    scanCentralClientToken: '$(ScanCentral.ClientToken)'
-	    sscUrl: 'http://3.70.95.75:2210/ssc'
-	    sscCiToken: '$(ScanCentral.SscCiToken)'
-	    uploadToSSC: true
-	    applicationIdentifierType: 'byId'
-	    applicationVersionId: '7'
-	    buildFailureCriteria: '[fortify priority order]:critical'
-	    taskResultForBuildFailureCriteria: 'FAIL'
-	    buildTool: 'mvn'
-	    block: true
-	    outputFile: 'result.fpr'
-	    logFile: 'scan.log'
-	    overwrite: true
+    - task: FortifyScanCentralSAST@7
+      inputs:
+        scanCentralCtrlUrl: 'http://3.123.38.205:8080/scancentral-ctrl/'
+        scanCentralClientToken: '$(ScanCentral.ClientToken)'
+        sscUrl: 'http://3.70.95.75:2210/ssc'
+        sscCiToken: '$(ScanCentral.SscCiToken)'
+        uploadToSSC: true
+        applicationIdentifierType: 'byId'
+        applicationVersionId: '7'
+        buildFailureCriteria: '[fortify priority order]:critical'
+        taskResultForBuildFailureCriteria: 'FAIL'
+        buildTool: 'mvn'
+        block: true
+        outputFile: 'result.fpr'
+        logFile: 'scan.log'
+        overwrite: true
 
 - stage: Debricked
   jobs:
