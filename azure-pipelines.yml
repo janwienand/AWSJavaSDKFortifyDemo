@@ -20,7 +20,7 @@ stages:
         applicationIdentifierType: 'byId'
         applicationVersionId: '7'
         buildFailureCriteria: '[fortify priority order]:critical'
-        taskResultForBuildFailureCriteria: 'WARN'
+        taskResultForBuildFailureCriteria: 'FAIL'
         buildTool: 'mvn'
 
 - stage: Debricked
