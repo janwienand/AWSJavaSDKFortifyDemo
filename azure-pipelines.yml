@@ -1,8 +1,8 @@
-trigger:
-- master
+trigger: none
+#- master
 
-pool:
-  vmImage: ubuntu-latest
+pool: default
+#  vmImage: ubuntu-latest
 
 stages:
 - stage: Fortify
