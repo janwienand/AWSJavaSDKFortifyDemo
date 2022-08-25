@@ -47,7 +47,7 @@ public class App {
     System.out.println("Upload complete");
     System.out.printf("%n");
 
-    //cleanUp(s3, bucket, key);
+    cleanUp(s3, bucket, key);
 
     System.out.println("Closing the connection to {S3}");
     s3.close();
