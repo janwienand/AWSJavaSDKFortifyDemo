@@ -12,13 +12,13 @@ stages:
     steps:
     - task: FortifyScanCentralSAST@7
       inputs:
-        scanCentralCtrlUrl: 'http://3.123.38.205:8080/scancentral-ctrl/'
+        scanCentralCtrlUrl: 'http://35.158.210.68:8080/scancentral-ctrl/'
         scanCentralClientToken: '$(ScanCentral.ClientToken)'
-        sscUrl: 'http://3.70.95.75:2210/ssc'
+        sscUrl: 'http://35.158.210.68:2210/ssc'
         sscCiToken: '$(ScanCentral.SscCiToken)'
         uploadToSSC: true
         applicationIdentifierType: 'byId'
-        applicationVersionId: '7'
+        applicationVersionId: '21'
         buildFailureCriteria: '[fortify priority order]:critical'
         taskResultForBuildFailureCriteria: 'FAIL'
         buildTool: 'mvn'
