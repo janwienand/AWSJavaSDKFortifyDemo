@@ -19,6 +19,7 @@ stages:
         uploadToSSC: true
         applicationIdentifierType: 'byId'
         applicationVersionId: '21'
-        buildFailureCriteria: '[fortify priority order]:critical'
-        taskResultForBuildFailureCriteria: 'WARN'
+        #buildFailureCriteria: '[fortify priority order]:critical'
+        #taskResultForBuildFailureCriteria: 'WARN'
+        block: true
         buildTool: 'mvn'
