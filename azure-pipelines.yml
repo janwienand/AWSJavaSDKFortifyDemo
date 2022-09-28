@@ -22,4 +22,6 @@ stages:
         #buildFailureCriteria: '[fortify priority order]:critical'
         #taskResultForBuildFailureCriteria: 'WARN'
         block: true
+        outputFile: 'result.fpr'
+        logFile: 'fortify.log'
         buildTool: 'mvn'
