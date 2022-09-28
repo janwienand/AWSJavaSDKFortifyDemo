@@ -40,6 +40,7 @@ public class App {
     System.out.println("Uploading object...");
     System.out.println(key);
     System.out.println(acl);
+    
 
     s3.putObject(PutObjectRequest.builder().bucket(bucket).key(key)
             .build(),
