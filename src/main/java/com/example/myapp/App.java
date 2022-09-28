@@ -26,35 +26,35 @@ import software.amazon.awssdk.services.s3.S3Client;
 
 public class App {
 
-//  public static void main(String[] args) throws IOException {
-//
-//    Region region = Region.US_WEST_2;
-//    S3Client s3 = S3Client.builder().region(region).build();
-//
-//    String bucket = "jw-testbucket" + System.currentTimeMillis();
-//    String key = "WxTWBsdoAw4gRva64Ws7Ue050eiz1o";
-//    String acl = "public-read-write";
-//    String test = "test";
-//
-//    tutorialSetup(s3, bucket, region, acl);
-//
-//    System.out.println("Uploading object...");
-//
-//    s3.putObject(PutObjectRequest.builder().bucket(bucket).key(key)
-//            .build(),
-//        RequestBody.fromString("Testing with the {sdk-java}"));
-//
-//    System.out.println("Upload complete");
-//    System.out.printf("%n");
-//
-//    cleanUp(s3, bucket, key);
-//
-//    System.out.println("Closing the connection to {S3}");
-//    s3.close();
-//    System.out.println("Connection closed");
-//    System.out.println("Exiting...");
-//
-//  }
+  public static void main(String[] args) throws IOException {
+
+    Region region = Region.US_WEST_2;
+    S3Client s3 = S3Client.builder().region(region).build();
+
+    String bucket = "jw-testbucket" + System.currentTimeMillis();
+    String key = "WxTWBsdoAw4gRva64Ws7Ue050eiz1o";
+    String acl = "public-read-write";
+
+    tutorialSetup(s3, bucket, region, acl);
+
+    System.out.println("Uploading object...");
+    System.out.println(key);
+    System.out.println(acl);
+
+    s3.putObject(PutObjectRequest.builder().bucket(bucket).key(key)
+            .build(),
+        RequestBody.fromString("Testing with the {sdk-java}"));
+
+    System.out.println("Upload complete");
+    System.out.printf("%n");
+
+    cleanUp(s3, bucket, key);
+
+    System.out.println("Closing the connection to {S3}");
+    s3.close();
+    System.out.println("Connection closed");
+    System.out.println("Exiting...");
+  }
 
   public static void tutorialSetup(S3Client s3Client, String bucketName, Region region, String acl) {
     try {
