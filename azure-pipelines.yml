@@ -25,3 +25,17 @@ stages:
         outputFile: 'result.fpr'
         logFile: 'fortify.log'
         buildTool: 'mvn'
+  
+- stage: Debricked
+  jobs:
+  - job: Debricked
+    displayName: Fortify SCA (Debricked)
+    steps:
+      - script: mvn dependency:tree -DoutputFile=.debricked-maven-dependencies.tgf -DoutputType=tgf
+        displayName: 'mvn dependency:tree'
+      - script: |
+          env > env.list
+          docker run -v $HOME:$HOME --env-file ./env.list --entrypoint "/azure-devops.sh" debricked/debricked-scan:latest
+        displayName: 'Debricked scan'
+        env:
+          DEBRICKED_TOKEN: $(DEBRICKED_TOKEN)
